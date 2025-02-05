@@ -1,7 +1,7 @@
-salesTaxRate = 0.065
+stateTaxRate = 0.065
 federalTaxRate = 0.28
 salary = input("Enter your salary: ")
-stateTax = float(salary) * salesTaxRate
+stateTax = float(salary) * stateTaxRate
 federalTax = float(salary) * federalTaxRate
 numDependents = input("Enter the number of dependents: ")
 dependentRate = float(numDependents) * 0.025
