@@ -6,3 +6,7 @@ salePrice = retailPrice - sale
 saleProfit = salePrice - wholesalePrice
 print("Item Name : TV Stand")
 print("Retail Price:" , retailPrice)
+print("Wholesale Price:" , wholesalePrice)
+print("Profit:" , profit)
+print("Sale Price:" , salePrice)
+print("Sale Profit:" , saleProfit)
