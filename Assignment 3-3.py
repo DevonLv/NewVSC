@@ -11,6 +11,10 @@ year=int(input("Enter the year (0001-9999): "))
 month=int(input("Enter the month (1-12): "))
 day=int(input("Enter the day (1-31): "))
 outputStatement=str(month) + ("/" + str(day)) + ("/" + str(year))
+if month==4 or month==6 or month==9 or month==11:
+    maxDay=30
+elif month==2:
+    maxDay=28
 
 if int(year) <= minYear:
     validDate=False
