@@ -10,6 +10,7 @@ maxDay=31
 year=int(input("Enter the year (0001-9999): "))
 month=int(input("Enter the month (1-12): "))
 day=int(input("Enter the day (1-31): "))
+outputStatement=str(year) + str(month) + str(day)
 
 if int(year) <= minYear:
     validDate=False
@@ -18,6 +19,6 @@ elif int(month) < minMonth or int(month) > maxMonth:
 elif int(day) < minDay or int(day) > maxDay:
     validDate=False
 if validDate == True:
-    print("The DTG provided is valid.")
+    print((outputStatement) + ("is a valid date"))
 else:
-    print("The DTG provided is invalid.")
+    print((outputStatement) + ("is an invalid date"))
