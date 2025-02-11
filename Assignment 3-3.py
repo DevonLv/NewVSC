@@ -10,7 +10,7 @@ maxDay=31
 year=int(input("Enter the year (0001-9999): "))
 month=int(input("Enter the month (1-12): "))
 day=int(input("Enter the day (1-31): "))
-outputStatement=str(year) + str(month) + str(day)
+outputStatement=str(month) + ("/" + str(day)) + ("/" + str(year))
 
 if int(year) <= minYear:
     validDate=False
@@ -19,6 +19,6 @@ elif int(month) < minMonth or int(month) > maxMonth:
 elif int(day) < minDay or int(day) > maxDay:
     validDate=False
 if validDate == True:
-    print((outputStatement) + ("is a valid date"))
+    print((outputStatement) + (" is a valid date"))
 else:
-    print((outputStatement) + ("is an invalid date"))
+    print((outputStatement) + (" is an invalid date"))
