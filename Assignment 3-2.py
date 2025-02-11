@@ -1,17 +1,17 @@
-test_score=int(input("Enter your test score: "))
-class_rank=int(input("Enter your class rank: "))
-if test_score>=90:
-    if class_rank>=25:
+testScore=int(input("Enter your test score: "))
+classRank=int(input("Enter your class rank: "))
+if testScore>=90:
+    if classRank>=25:
         print("Accept")
     else:
         print("Reject")
-elif test_score>=80:
-    if class_rank>=50:
+elif testScore>=80:
+    if classRank>=50:
         print("Accept")
     else:
         print("Reject")
-elif test_score>=70:
-    if class_rank>=75:
+elif testScore>=70:
+    if classRank>=75:
         print("Accept")
     else:
         print("Reject")
