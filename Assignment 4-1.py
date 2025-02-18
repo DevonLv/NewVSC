@@ -1,5 +1,6 @@
 #POS charge calculator for wood signs
 
+#declare variables and gain inputs from User
 charge=35.00
 numChars=float(input('Enter the number of characters: '))
 woodType=input('Is the sign made of oak or pine? ')
@@ -23,5 +24,8 @@ if woodType=='oak':
 else:
     woodPrice=0
 
+#calculate the final total charge
 final_charge=charge+charPrice+colorPrice+woodPrice
+
+#display final charge
 print(f'The charge for this sign is ${final_charge}')
