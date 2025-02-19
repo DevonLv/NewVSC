@@ -1,5 +1,4 @@
 #Generate and Printe Employee's Bonus based on Productivity Bonus
-
 #User Inputs for Employee Name, Shifts and Transactions
 Fname=input("Enter First Name of Employee: ")
 Lname=input("Enter Last Name of Employee: ")
