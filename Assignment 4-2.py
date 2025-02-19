@@ -6,7 +6,7 @@ Lname=input("Enter Last Name of Employee: ")
 empName=Fname + " " + Lname
 numShifts=int(input("Enter the number of shifts: "))
 numTrans=int(input("Enter the number of transactions: "))
-transDollars=int(input("Enter the total dollar amount of transactions: "))
+transDollars=float(input("Enter the total dollar amount of transactions: "))
 
 #Calculate Employee's Productivity Score
 transAvg=int(transDollars/numTrans)
