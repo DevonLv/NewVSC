@@ -13,27 +13,23 @@ def display_menu():
     print("2. Exit")
 
 #Display the menu options
-def main():
-    """Main function to handle program execution."""
-    display_menu()
+print(display_menu())
 
 #Execute the menu functions
-    while True: 
-        try:
-            choice = int(input("Please select an option: "))
-
+choice = int(input("Please select an option:"))
+while True:
             # print the list of authorized vehicles
-            if choice == 1:
-                print("Printing all Authorized Vehicles...")
-                print(AllowedVehiclesList) 
+        if choice == 1:
+                print("The AutoCountry sales manager has authorized the purchase and selling of the following vehicles:")
+                for item in AllowedVehiclesList:
+                    print(item)
+                print(display_menu())
+                choice = int(input("Please select an option:"))
                 
             # exit the while loop, ending the program.
-            elif choice == 2:
+        elif choice == 2:
                 print("Exiting...")
                 break 
             
-            else:
+        else:
                 print("Invalid choice. Please enter 1 or 2.")
-
-        except ValueError:
-            print("Invalid input. Please do as told.")
