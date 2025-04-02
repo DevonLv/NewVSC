@@ -28,7 +28,7 @@ while True:
                 
             # exit the while loop, ending the program.
         elif choice == 2:
-                print("Exiting...")
+                print("Thank you for using the AutoCountry Vehicle Finder, good-bye!")
                 break 
             
         else:
