@@ -11,6 +11,7 @@ def display_menu():
     print("Please enter an option from the menu")
     print("1. PRINT all Authorized Vehicles")
     print("2. Exit")
+    return ""
 
 #Display the menu options
 print(display_menu())
