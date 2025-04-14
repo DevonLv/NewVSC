@@ -1,4 +1,4 @@
-## AutoCountry Car Finder v0.2 ##
+## AutoCountry Car Finder v0.3 ##
 # This is a simple car finder application that allows users to search for cars based on various criteria.
 
 # Declarations
@@ -6,12 +6,13 @@ AllowedVehiclesList = [ 'Ford F-150', 'Chevrolet Silverado', 'Tesla CyberTruck',
 def display_menu():
     """Displays the AutoCountry Vehicle Finder menu."""
     print("********************************")
-    print("AutoCountry Vehicle Finder v0.2")
+    print("AutoCountry Vehicle Finder v0.3")
     print("********************************")
     print("Please enter an option from the menu")
     print("1. PRINT all Authorized Vehicles")
     print("2. SEARCH for an authorized vehicle")
-    print("3. Exit")
+    print("3. ADD Authorized Vehicle")
+    print("4. Exit")
     print("********************************")
     return ""
 
@@ -46,8 +47,15 @@ while True:
             print(result)
             print(display_menu())
 
-        #exit the while loop, ending the program.
+        #add a new vehicle to the authorized list
         elif choice == 3:
+            addVehicle = input("Please ENTER the full vehicle name you would like to add: ")
+            AllowedVehiclesList.append(addVehicle)
+            print(f"'{addVehicle}' has been added to the authorized vehicle list.")
+            print(display_menu())
+
+        #exit the while loop, ending the program.
+        elif choice == 4:
             print("Thank you for using the AutoCountry Vehicle Finder, good-bye!")
             break
 
