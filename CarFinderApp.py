@@ -2,7 +2,7 @@
 # This is a simple car finder application that allows users to search for cars based on various criteria.
 
 # Declarations
-AllowedVehiclesList = [ 'Ford F-150', 'Chevrolet Silverado', 'Tesla CyberTruck', 'Toyota Tundra', 'Nissan Titan' ]
+AllowedVehiclesList = [ 'Ford F-150', 'Chevrolet Silverado', 'Tesla CyberTruck', 'Toyota Tundra', 'Nissan Titan', 'Rivian R1T' ]
 def display_menu():
     """Displays the AutoCountry Vehicle Finder menu."""
     print("********************************")
@@ -59,16 +59,15 @@ while True:
         elif choice == 4:
             removeVehicle = input("Please ENTER the full vehicle name you would like to remove: ")
             if removeVehicle in AllowedVehiclesList:
-                removeConfirm = input(f"Are you sure you want to remove '{removeVehicle}' from the authorized vehicles list? (yes/no): ")
+                removeConfirm = input(f"Are you sure you want to remove '{removeVehicle}' from the authorized vehicles list? (yes/no): ").lower()
+                #if the user confirms, remove the vehicle from the list
                 if removeConfirm == "yes":
                     AllowedVehiclesList.remove(removeVehicle)
                     print(f"You have REMOVED '{removeVehicle}' from the authorized vehicles list.")
                 elif removeConfirm == "no":
                     print(f"You have NOT removed '{removeVehicle}' from the authorized vehicles list.")
-                else:
-                    print(f"This is not an accepted input.")
             else:
-                print(f"You have REMOVED '{removeVehicle}' from the authorized vehicles list.")
+                print(f"'{removeVehicle}' is not a vehicle on the authorized vehicles list.")
             print(display_menu())
 
         #exit the while loop, ending the program.
