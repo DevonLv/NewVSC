@@ -51,7 +51,7 @@ while True:
         elif choice == 3:
             addVehicle = input("Please ENTER the full vehicle name you would like to add: ")
             AllowedVehiclesList.append(addVehicle)
-            print(f"'{addVehicle}' has been added to the authorized vehicle list.")
+            print(f"You have added '{addVehicle}' as an authorized vehicle.")
             print(display_menu())
 
         #exit the while loop, ending the program.
