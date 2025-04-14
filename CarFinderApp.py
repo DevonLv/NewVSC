@@ -1,4 +1,4 @@
-## AutoCountry Car Finder v0.3 ##
+## AutoCountry Car Finder v0.4 ##
 # This is a simple car finder application that allows users to search for cars based on various criteria.
 
 # Declarations
@@ -6,13 +6,14 @@ AllowedVehiclesList = [ 'Ford F-150', 'Chevrolet Silverado', 'Tesla CyberTruck',
 def display_menu():
     """Displays the AutoCountry Vehicle Finder menu."""
     print("********************************")
-    print("AutoCountry Vehicle Finder v0.3")
+    print("AutoCountry Vehicle Finder v0.4")
     print("********************************")
     print("Please enter an option from the menu")
     print("1. PRINT all Authorized Vehicles")
     print("2. SEARCH for an authorized vehicle")
     print("3. ADD Authorized Vehicle")
-    print("4. Exit")
+    print("4. DELETE Authorized Vehicle")
+    print("5. Exit")
     print("********************************")
     return ""
 
@@ -54,8 +55,22 @@ while True:
             print(f"You have added '{addVehicle}' as an authorized vehicle.")
             print(display_menu())
 
-        #exit the while loop, ending the program.
+        #remove a vehicle from the authorized list
         elif choice == 4:
+            removeVehicle = input("Please ENTER the full vehicle name you would like to remove: ")
+            if removeVehicle in AllowedVehiclesList:
+                removeConfirm = input(f"Are you sure you want to remove '{removeVehicle}' from the authorized vehicles list? (yes/no): ")
+                if removeConfirm == "yes":
+                    AllowedVehiclesList.remove(removeVehicle)
+                    print(f"You have REMOVED '{removeVehicle}' from the authorized vehicles list.")
+                else:
+                    print(f"You have NOT removed '{removeVehicle}' from the authorized vehicles list.")
+            else:
+                print(f"You have REMOVED '{removeVehicle}' from the authorized vehicles list.")
+            print(display_menu())
+
+        #exit the while loop, ending the program.
+        elif choice == 5:
             print("Thank you for using the AutoCountry Vehicle Finder, good-bye!")
             break
 
