@@ -64,6 +64,7 @@ while True:
                 if removeConfirm == "yes":
                     AllowedVehiclesList.remove(removeVehicle)
                     print(f"You have REMOVED '{removeVehicle}' from the authorized vehicles list.")
+                # if the user changes it's mind
                 elif removeConfirm == "no":
                     print(f"You have NOT removed '{removeVehicle}' from the authorized vehicles list.")
             else:
